@@ -7,7 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [MatToolbarModule],
   template: `
     <mat-toolbar class="footer">
-      <span>© 2026 FitLife — Trabajo Final Universitario</span>
+      <span>© 2026 FitLife — Trabajo Final Sena</span>
     </mat-toolbar>
   `,
   styles: [`
