@@ -66,6 +66,12 @@ import { NotificationService } from '../../../core/services/notification.service
       font-weight: bold;
       cursor: pointer;
     }
+
+    mat-toolbar {
+  background-color: #E8EDEE !important;
+  color: #004D55 !important;
+    }
+
     .spacer { flex: 1 1 auto; }
   `]
 })
