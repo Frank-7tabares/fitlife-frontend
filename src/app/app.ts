@@ -20,6 +20,14 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
     .content {
       padding: 80px 16px 60px;
       min-height: 100vh;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 70px 8px 60px;
+      }
     }
   `]
 })
