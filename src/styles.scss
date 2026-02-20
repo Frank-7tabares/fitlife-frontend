@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as *;
 @use 'material-theme';
 
 * {
@@ -9,4 +9,11 @@
 
 body {
   font-family: Roboto, sans-serif;
+  background-color: #DDE4E6;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
