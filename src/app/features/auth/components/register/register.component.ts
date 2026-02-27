@@ -436,14 +436,22 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
-    if (this.registerForm.valid) {
-      this.isLoading = true;
-      this.errorMessage = '';
-      setTimeout(() => {
-        this.successMessage = '¡Cuenta creada! Redirigiendo al login...';
+  if (this.registerForm.valid) {
+    this.isLoading = true;
+    this.errorMessage = '';
+    const { first_name, email, password } = this.registerForm.getRawValue();
+    this.authService.register(first_name, email, password).subscribe({
+      next: () => {
+        this.successMessage = '¡Cuenta creada! Redirigiendo...';
         this.isLoading = false;
-        setTimeout(() => this.router.navigate(['/auth/login']), 2000);
-      }, 1000);
+        setTimeout(() => this.router.navigate(['/dashboard']), 1500);
+      },
+      error: (err) => {
+        this.errorMessage = err.error?.detail || 'Error al registrar. Intenta de nuevo.';
+        this.isLoading = false;
+      }
     }
+    );
+  }
   }
 }
