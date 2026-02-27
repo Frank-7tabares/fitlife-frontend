@@ -12,11 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   `,
   styles: [`
     .footer {
-      justify-content: center;
-      font-size: 0.85rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+  background-color: #E8EDEE !important;
+  color: #004D55 !important;
+  justify-content: center;
+  font-size: 0.85rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
     }
   `]
 })
